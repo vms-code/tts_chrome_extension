@@ -4,7 +4,7 @@ import useStorage from '@src/shared/hooks/useStorage';
 import exampleThemeStorage from '@src/shared/storages/exampleThemeStorage';
 import withSuspense from '@src/shared/hoc/withSuspense';
 import withErrorBoundary from '@src/shared/hoc/withErrorBoundary';
-import Playback from '@src/components/Playback/Playback';
+import Playback from '@root/src/pages/content/components/Player/Playback';
 
 const Popup = () => {
   // const theme = useStorage(exampleThemeStorage);

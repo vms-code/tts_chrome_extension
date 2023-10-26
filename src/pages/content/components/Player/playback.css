@@ -60,6 +60,7 @@
     align-items: center;
     width: 80%;
     margin-bottom: 5px;
+    background-color: #000000;
 }
 
 .progressBar {

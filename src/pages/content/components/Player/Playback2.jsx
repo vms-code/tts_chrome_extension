@@ -1,40 +1,42 @@
-import '@src/components/Playback/Playback.css';
 import { useState, useRef } from 'react'
-
+import PlayIcon from './icons/PlayIcon';
 
 export default function Playback() {
     const wrapper = useRef();
 
+    const [text, setText] = useState('');
     const [isPlaying, setIsPlaying] = useState(false);
     const [speed, setSpeed] = useState(1);
     const [isDragging, setIsDragging] = useState(false);
 
+
+
     const playPauseHandler = () => {
-        
+
     };
 
     const forwardHandler = (event) => {
-        
+
     };
 
     const backwardHandler = (event) => {
-        
+
     };
 
     const revertHandler = (event) => {
-        
+
     };
-    
+
     function decreaseSpeed(event) {
-        
+
     };
 
     function increaseSpeed(event) {
-        
+
     };
 
     const changeProgressHandler = (event) => {
-        
+
     };
 
     // moves element based on top and left positions and their ref
@@ -66,31 +68,35 @@ export default function Playback() {
 
 
     return (
-        <div className="playerContainer" onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp} ref={wrapper}>
-            <div className="progressBarWrapper">
-                <input
-                    className="progressBar"
-                    type="range"
-                    min="0"
-                    max="1"
-                    step="0.01"
-                    onChange={changeProgressHandler}
-                />
-            </div>
-
-            <div className="controls">
-                <button onClick={revertHandler}>Revert</button>
-                <button className="iconButtons" data-action="rewind" onClick={backwardHandler}>«</button>
-                <button className="playButton" onClick={playPauseHandler}>{isPlaying ? '||' : 'Play'}</button>
-                <button className="iconButtons" data-action="advance" onClick={forwardHandler}>»</button>
-            </div>
-
-            <div className="speedWrapper">
-                <span className="speedControls">
-                    <span className="draggable">{speed.toFixed(2)}</span>
-                    <button  onClick={decreaseSpeed} data-action="slower">{String.fromCharCode(45)}</button>
-                    <button  onClick={increaseSpeed} data-action="faster">{String.fromCharCode(43)}</button>
-                </span>
+        <div className="
+                
+            "
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseUp}
+            ref={wrapper}
+        >
+            <div class="container">
+                <div class="top-icons">
+                    <i class="fas fa-random" title="shuffle"></i>
+                    <i class="far fa-hand-point-left" title="previous"></i>
+                    <PlayIcon width={"800px"} height={"800px"} fill={"#000000"} />
+                    <i class="far fa-hand-point-right" title="next"></i>
+                    <i class="fas fa-redo" title="repeat"></i>
+                </div>
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-text">
+                    <span title="current">1:01</span><span title="end">3:35</span>
+                </div>
+                <div class="bar-circle" title="1:01"></div>
+                <div class="bottom-icons">
+                    <i class="far fa-heart" title="like"></i>
+                    <i class="fas fa-heart-broken" title="dislike"></i>
+                </div>
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
             </div>
 
         </div>
